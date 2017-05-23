@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<script src="http://cdn.bootcss.com/angular.js/1.4.3/angular.js"></script>
+	<script>
+	var app=angular.module('app',[]);
+	app.controller('mainCtrl', function($scope){
+		$scope.num1=0;
+		$scope.num2=0;
+		$scope.num3=0;
+	})
+	</script>
+	<style>
+		div p {
+		    font-size: 80px;
+		}
+		div span {
+		    font-size: 50px;
+		}
+		div input {
+		    width: 50%;
+		    height: 80px;
+		    font-size: 50px;
+		}
+	</style>
+</head>
+<body  ng-app="app" ng-controller="mainCtrl">
+<div>
+<span>num1</span><input type="number" ng-model="num1"><br>
+<span>num2</span><input type="number" ng-model="num2"><br>
+<span>num3</span><input type="number" ng-model="num3"><br>
+<p>result1: {{ num1%8 }}</p><br>
+<p>result2: {{ num2%8 }}</p><br>
+<p>result3: {{ (num1 + num2 + num3)%6 }}</p>
+</div>
+</body>
+</html>
+
+
+
